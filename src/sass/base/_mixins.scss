@@ -11,3 +11,15 @@
         background: $main-color;
     }
 }
+
+@mixin  divider {
+    &:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 2px;
+       
+        background-color: $main-color;
+    }
+    
+}

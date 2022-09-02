@@ -1,0 +1,47 @@
+.about {
+    min-height: 840px;
+    padding: 120px 100px 120px 0px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 400px 640px;
+    }
+    &__information {
+        padding-left: 70px;
+        padding-bottom: 100px;
+    }
+    &__subtitle {
+        position: relative;
+        @include before_circle;
+    }
+
+    &__divider {
+        position: relative;
+        top: -1%;
+        @include divider;
+    }
+    &__skills {
+        display: grid;
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        grid-auto-rows: 1fr;
+        column-gap: 50px;
+        row-gap: 20px;
+    }
+    &__skill {
+        display: grid;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+    }
+    &__icon {
+        position: relative;
+        padding: 15px 0 0 15px;
+        @include before_circle;
+        &:before {
+            top: 0;
+        }
+    }
+
+    &__descr {
+        margin-left: 20px;
+    }
+}
