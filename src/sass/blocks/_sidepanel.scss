@@ -1,5 +1,5 @@
 .sidepanel {
-    position: absolute;
+    position: fixed;
     top: 230px;
     left: 50px;
     display: flex;
@@ -8,9 +8,30 @@
     align-items: center;
     height: 340px;
     z-index: 3;
+    &__link {
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+            svg path {
+                fill: $main-color;
+                transition: 0.5s;
+            }   
+        }
+    }
     &__divider {
         width: 2px;
         height: 70px;
         background-color: #000;
+    }
+    &__text {
+        height: 150px;
+        width: 25px;
+        span {
+            transform: rotate(-90deg) translate(-30%,-260%);
+            display: block;
+            width: 150px;
+        }
     }
 }
