@@ -2,6 +2,28 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/_progress-bar.js":
+/*!*****************************************!*\
+  !*** ./src/js/modules/_progress-bar.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var progress = function progress() {
+  var percent = document.querySelectorAll('.knowledge__progress-percent'),
+      lines = document.querySelectorAll('.knowledge__progress-line span');
+  percent.forEach(function (item, i) {
+    lines[i].style.width = item.innerHTML;
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (progress);
+
+/***/ }),
+
 /***/ "./src/js/modules/menu.js":
 /*!********************************!*\
   !*** ./src/js/modules/menu.js ***!
@@ -94,9 +116,12 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js");
+/* harmony import */ var _modules_progress_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/_progress-bar */ "./src/js/modules/_progress-bar.js");
+
 
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__["default"])('.hamburger', '.menu__close', '.menu', 'active');
+  (0,_modules_progress_bar__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 })();
 
