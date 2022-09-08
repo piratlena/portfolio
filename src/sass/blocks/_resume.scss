@@ -1,21 +1,7 @@
 .resume {
-  
-    &__title {
-        position: relative;
-        text-align: center;
-        @include before_circle;
-        &:before {
-            top: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
+    
     &__divider {
         display: block;
-        
         width: 60px;
         height: 3px;
         margin: 0 auto;
